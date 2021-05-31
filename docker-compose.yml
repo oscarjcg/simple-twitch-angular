@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  st-angular12:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4201:4201"
+    container_name: st-angular12
+    volumes:
+       - .:/usr/src/app/simple-twitch
+       - /usr/src/app/simple-twitch/node_modules
